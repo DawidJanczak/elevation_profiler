@@ -8,11 +8,13 @@ require 'pry'
 
 osm_file = 'map.osm'
 node_start = '3167844735'
-node_end = '2999413127'
+node_end = '2999412925'
 
 loader = Mormon::OSM::Loader.new(osm_file)
 router = Mormon::OSM::Router.new(loader)
 res = router.find_route(node_start, node_end, :foot)
+
+raise 'No route found' if res[1].empty?
 
 # Reverse coords since KML uses <lon,lat> instead of <lat,lon>
 placemark = KML::Placemark.new(
