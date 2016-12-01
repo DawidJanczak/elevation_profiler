@@ -14,11 +14,11 @@ loader = Mormon::OSM::Loader.new(osm_file)
 router = Mormon::OSM::Router.new(loader)
 res = router.find_route(node_start, node_end, :foot)
 
-
+# Reverse coords since KML uses <lon,lat> instead of <lat,lon>
 placemark = KML::Placemark.new(
   geometry: KML::LineString.new(
-    altitude_mode: 'clampToGround',
-    coordinates: res[1].map { |arr| arr.join(',') }.join(' ')
+    tessellate: true,
+    coordinates: res[1].map(&:reverse)
   )
 )
 
