@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'mormon'
+gem 'mormon', github: 'DawidJanczak/mormon', branch: 'add-path-to-foot'
 gem 'pry'
 gem 'ruby_kml'

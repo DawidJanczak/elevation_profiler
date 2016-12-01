@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/DawidJanczak/mormon.git
+  revision: a49bd8aab23203709b20e86ffd2eada5ebbd31b8
+  branch: add-path-to-foot
+  specs:
+    mormon (2.0.2)
+      nokogiri
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -5,8 +13,6 @@ GEM
     coderay (1.1.1)
     method_source (0.8.2)
     mini_portile2 (2.1.0)
-    mormon (2.0.2)
-      nokogiri
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     pry (0.10.4)
@@ -22,7 +28,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  mormon
+  mormon!
   pry
   ruby_kml
 
