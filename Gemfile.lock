@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mini_portile2 (2.1.0)
+    mormon (2.0.2)
+      nokogiri
+    nokogiri (1.6.8.1)
+      mini_portile2 (~> 2.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mormon
+
+BUNDLED WITH
+   1.13.6
