@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/DawidJanczak/mormon.git
-  revision: 0e50517ee4b95865728609563e9d74d6f3dc4f0d
+  revision: 6f3d24aec3cc5a5861fb166efe05afe6efb578c4
   branch: integration
   specs:
     mormon (2.0.2)

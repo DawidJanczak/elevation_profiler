@@ -7,7 +7,7 @@ require 'ruby_kml'
 require 'pry'
 
 osm_file = 'map.osm'
-nodes = %w[3167844735 2999412925 2482536143 2482536212]
+nodes = %w[3167844735 2999412925 2482536143 2482536212 2482536203 3535713750 746292282]
 
 loader = Mormon::OSM::Loader.new(osm_file)
 router = Mormon::OSM::Router.new(loader)
