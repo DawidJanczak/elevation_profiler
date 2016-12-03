@@ -7,20 +7,23 @@ require 'ruby_kml'
 require 'pry'
 
 osm_file = 'map.osm'
-node_start = '3167844735'
-node_end = '2999412925'
+nodes = %w[3167844735 2999412925 2482536143 2482536212]
 
 loader = Mormon::OSM::Loader.new(osm_file)
 router = Mormon::OSM::Router.new(loader)
-res = router.find_route(node_start, node_end, :foot)
 
-raise 'No route found' if res[1].empty?
+route = nodes.each_cons(2).inject([]) do |result, (node_start, node_end)|
+  res = router.find_route(node_start, node_end, :foot)
+  raise 'No route found' if res[1].empty?
+
+  result.concat(res[1])
+end
 
 # Reverse coords since KML uses <lon,lat> instead of <lat,lon>
 placemark = KML::Placemark.new(
   geometry: KML::LineString.new(
     tessellate: true,
-    coordinates: res[1].map(&:reverse)
+    coordinates: route.map(&:reverse)
   )
 )
 
