@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/DawidJanczak/mormon.git
-  revision: a49bd8aab23203709b20e86ffd2eada5ebbd31b8
-  branch: add-path-to-foot
+  revision: 0e50517ee4b95865728609563e9d74d6f3dc4f0d
+  branch: integration
   specs:
     mormon (2.0.2)
       nokogiri
