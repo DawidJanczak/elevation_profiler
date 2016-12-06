@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'bundler/setup'
 require 'mormon'
 require 'ruby_kml'
 require 'pry'
