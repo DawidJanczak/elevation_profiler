@@ -2,6 +2,6 @@ require 'sinatra/base'
 
 class ElevationProfiler < Sinatra::Base
   get '/' do
-    'Elevation Profiler'
+    haml :home
   end
 end

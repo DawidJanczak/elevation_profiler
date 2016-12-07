@@ -13,6 +13,8 @@ GEM
     coderay (1.1.1)
     daemons (1.2.4)
     eventmachine (1.2.1)
+    haml (4.0.7)
+      tilt
     method_source (0.8.2)
     mini_portile2 (2.1.0)
     nokogiri (1.6.8.1)
@@ -42,6 +44,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  haml
   mormon!
   pry
   ruby_kml
