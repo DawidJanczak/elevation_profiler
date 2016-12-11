@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "coffee-loader": "0.7.2",
+    "coffee-script": "1.12.1",
     "webpack" : "1.14.0",
     "webpack-dev-server": "1.16.2"
   }
