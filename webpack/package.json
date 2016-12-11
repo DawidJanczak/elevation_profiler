@@ -1,0 +1,9 @@
+{
+  "name": "elevation-profiler",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "webpack" : "1.14.0",
+    "webpack-dev-server": "1.16.2"
+  }
+}
