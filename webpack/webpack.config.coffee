@@ -42,7 +42,6 @@ plugins = [
 loaders = [
   { test: /\.cjsx$/, loaders: ['coffee', 'cjsx']}
   { test: /\.coffee$/, loader: 'coffee' }
-  { test: /\.css$/, exclude: /node_modules/, loader: "style!css" }
   {
     test: /\.gif$/
     include: [
@@ -59,8 +58,7 @@ loaders = [
   {
     test: /\.png$/
     include: [
-      path.resolve(__dirname, "src/images"),
-      path.resolve(__dirname, "node_modules/jquery-ui")
+      path.resolve(__dirname, "node_modules/leaflet")
     ]
     loader: "url?mimetype=image/png&limit=10000"
   }

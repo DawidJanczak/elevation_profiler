@@ -5,3 +5,4 @@ start:
 
 install:
 	npm install --ignore-scripts
+	cd node_modules/node-sass && node scripts/install.js scripts/build.js
