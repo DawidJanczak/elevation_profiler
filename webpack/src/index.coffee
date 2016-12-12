@@ -31,12 +31,14 @@ findClosestTo = (origin, parsed) ->
   found = null
   for element in parsed.elements
     elemLatLng = new L.LatLng(element.lat, element.lon)
-    if origin.distanceTo(elemLatLng) < minDistance
+    newDistance = origin.distanceTo(elemLatLng)
+    if newDistance < minDistance
+      minDistance = newDistance
       found = elemLatLng
   found
 
 document.addEventListener('DOMContentLoaded', ->
-  map = L.map('map').setView([25.1701, 121.5948], 13)
+  map = L.map('map').setView([25.1701, 121.6], 15)
 
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
