@@ -18,7 +18,6 @@ overpass_query = (latlng) ->
 findClosestTo = (origin, parsed) ->
   minDistance = 1000
   found = null
-  debugger
   for element in parsed.elements
     elemLatLng = new L.LatLng(element.lat, element.lon)
     if origin.distanceTo(elemLatLng) < minDistance
