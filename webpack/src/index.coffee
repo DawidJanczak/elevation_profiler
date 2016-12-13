@@ -46,13 +46,16 @@ document.addEventListener('DOMContentLoaded', ->
 
   map.on('click', (ev) ->
     latlng = ev.latlng
-    # TODO: handle no nodes returned
     console.log(latlng)
     fetch("http://overpass-api.de/api/interpreter?data=#{overpass_query(latlng)}")
       .then((response) => response.text())
       .then((body) =>
         found = findClosestTo(latlng, JSON.parse(body))
-        L.marker(found).addTo(map)
+        if found?
+          L.marker(found).addTo(map)
+        else
+          # TODO: change this to a nice error message
+          console.log("no ways next to #{latlng}")
       )
   )
 )
