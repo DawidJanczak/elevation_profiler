@@ -19,7 +19,7 @@ overpass_query = (latlng) ->
   lng = latlng.lng
   """
   [out:json];
-  way(around:100,#{lat},#{lng})->.ways;
+  way(around:100,#{lat},#{lng})[highway]->.ways;
   node(around:100,#{lat},#{lng})->.nodes;
   .ways >->.way_nodes;
   node.nodes.way_nodes;
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', ->
 
   map.on('click', (ev) ->
     latlng = ev.latlng
-    # TODO: don't select rivers! Check for highway tag presence.
     # TODO: handle no nodes returned
+    console.log(latlng)
     fetch("http://overpass-api.de/api/interpreter?data=#{overpass_query(latlng)}")
       .then((response) => response.text())
       .then((body) =>
